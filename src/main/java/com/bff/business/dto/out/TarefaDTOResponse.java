@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Builder
 public class TarefaDTOResponse {
     private String id;
-    private String nomeTarefa;
+    private String nome;
     private String descricao;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss")
     private LocalDateTime dataCriacao;
