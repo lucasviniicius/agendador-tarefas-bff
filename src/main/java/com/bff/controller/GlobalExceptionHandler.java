@@ -1,8 +1,9 @@
-package com.usuarios.controller;
+package com.bff.controller;
 
-import com.usuarios.infrastructure.exception.ConflictException;
-import com.usuarios.infrastructure.exception.ResourceNotFoundException;
-import com.usuarios.infrastructure.exception.UnauthorizedException;
+import com.bff.infrastructure.exception.ConflictException;
+import com.bff.infrastructure.exception.ResourceNotFoundException;
+import com.bff.infrastructure.exception.UnauthorizedException;
+import com.bff.infrastructure.exception.IllegalArgumentException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -23,5 +24,10 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(UnauthorizedException.class)
     public ResponseEntity<String> handleUnauthorizedException(UnauthorizedException ex){
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.UNAUTHORIZED);
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<String> handleIllegalArgument(IllegalArgumentException ex){
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
 }

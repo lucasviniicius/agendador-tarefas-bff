@@ -1,4 +1,4 @@
-package com.usuarios.infrastructure.exception;
+package com.bff.infrastructure.exception;
 
 public class ConflictException extends RuntimeException {
     public ConflictException(String menssagem) {

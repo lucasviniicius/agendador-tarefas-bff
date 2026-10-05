@@ -1,4 +1,4 @@
-package com.usuarios.infrastructure.exception;
+package com.bff.infrastructure.exception;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String menssagem) {

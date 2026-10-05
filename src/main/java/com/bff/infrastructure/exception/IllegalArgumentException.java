@@ -1,4 +1,4 @@
-package com.usuarios.infrastructure.exception;
+package com.bff.infrastructure.exception;
 
 public class IllegalArgumentException extends RuntimeException {
     public IllegalArgumentException(String mensagem) {
