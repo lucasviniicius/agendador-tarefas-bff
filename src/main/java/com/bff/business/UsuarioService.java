@@ -8,6 +8,7 @@ import com.bff.business.dto.in.UsuarioDTORequest;
 import com.bff.business.dto.out.EnderecoDTOResponse;
 import com.bff.business.dto.out.TelefoneDTOResponse;
 import com.bff.business.dto.out.UsuarioDTOResponse;
+import com.bff.business.dto.out.ViaCepDTOResponse;
 import com.bff.infrastructure.client.UsuarioClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -52,5 +53,9 @@ public class UsuarioService {
 
     public TelefoneDTOResponse cadastraTelefone(String token, TelefoneDTORequest telefoneDTO){
         return usuarioClient.cadastraTelefone(telefoneDTO, token);
+    }
+
+    public ViaCepDTOResponse buscarEnderecoCep(String cep){
+        return usuarioClient.buscarDadosCep(cep);
     }
 }

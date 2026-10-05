@@ -1,8 +1,7 @@
-package com.usuarios.infrastructure.exception;
+package com.bff.infrastructure.exception;
 
-import org.springframework.security.core.AuthenticationException;
 
-public class UnauthorizedException extends AuthenticationException {
+public class UnauthorizedException extends RuntimeException {
     public UnauthorizedException(String message) {
         super(message);
     }
